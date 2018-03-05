@@ -1,0 +1,63 @@
+﻿
+<div ng-controller="EventsController as NC" class="height-full">
+    <div ng-if="!NC.isLoaded">
+        <i class="fa fa-refresh fa-spin" style="font-size:24px"></i>
+    </div>
+    <div ng-if="NC.isLoaded">
+        <div ng-repeat="event in NC.events">
+            <div class="list-item">
+                <div ng-show="NC.showAll" ng-click="NC.toggleStory(event)" )>
+                    <div class="clearfix">
+                        <div class="list-item-title clearfix">
+                            <div class="title-inner col-xs-7">
+                                {{event.Title}}
+                            </div>
+                            <div class="list-item-date col-xs-5">
+                                {{event.Date | jsDate | date:"MM-dd-yy"}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="list-item-body">
+
+                        <div class="col-xs-3 col-lg-3">
+                            <img src="http://localhost:50409/Content/{{event.Image}}" class="list-item-image" />
+                        </div>
+                        <div class="col-xs-9 col-lg-9">
+                            <div class="list-item-text">{{event.Description}}</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="list-item-expand" ng-show="event.showFull" ng-click="NC.toggleStory(event)">
+
+                <div class="list-item-title clearfix">
+
+                    <div class="title-inner col-xs-7">
+                        {{event.Title}}
+                    </div>
+
+                    <div class="list-item-date col-xs-5">
+                        {{event.Date | jsDate | date:"MM-dd-yy}}
+                    </div>
+
+                </div>
+
+                <div class="expanded-story">
+
+                    <div>
+                        <!--  <img class="expanded-item-image" src="../Content/images/cold-snow-winter-mountain.jpeg" />-->
+                    </div>
+
+                    <div class="expanded-body">
+                        {{event.Description}}
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>

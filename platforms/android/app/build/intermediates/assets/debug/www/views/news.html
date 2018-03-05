@@ -1,0 +1,61 @@
+﻿
+<div ng-controller="NewsController as NC" class="height-full">
+    <p></p>
+    <div ng-if="!NC.isLoaded">
+        <i class="fa fa-refresh fa-spin" style="font-size:24px"></i>
+    </div>
+    <div ng-if="NC.isLoaded">
+        <div ng-repeat="story in NC.newsItems">
+            <div class="list-item">
+                <div ng-show="NC.showAll" ng-click="NC.toggleStory(story)" )>
+                    <div class="clearfix">
+                        <div class="list-item-title clearfix">
+                            <div class="title-inner col-xs-7">
+                                {{story.Title}}
+                            </div>
+                            <div class="list-item-date col-xs-5">
+                                {{story.Date | jsDate | date:"MM-dd-yy"}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="list-item-body">
+
+                        <div class="col-xs-12 col-lg-12">
+                            <div class="list-item-text">{{story.Description}}</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="list-item-expand" ng-show="story.showFull" ng-click="NC.toggleStory(story)">
+
+                <div class="list-item-title clearfix">
+
+                    <div class="title-inner col-xs-7">
+                        {{story.Title}}
+                    </div>
+
+                    <div class="list-item-date col-xs-5">
+                        {{story.Date | jsDate | date:"MM-dd-yy"}}
+                    </div>
+
+                </div>
+
+                <div class="expanded-story">
+
+                    <div>
+                     <!--  <img class="expanded-item-image" src="../Content/images/cold-snow-winter-mountain.jpeg" />-->
+                    </div>
+
+                    <div class="expanded-body">
+                        {{story.Description}}
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>

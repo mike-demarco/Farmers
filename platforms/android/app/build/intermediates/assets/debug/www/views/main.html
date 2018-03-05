@@ -1,0 +1,52 @@
+﻿<div ng-controller="MainController as MainC">
+    <div class="clearfix icon-row">
+        <div class="col-xs-6" ng-click="MainC.toggleMap(MainC.showMap)">
+                <div class="main-icon">
+                    <i class="fa fa-map white-color center" aria-hidden="true"></i>
+                    <p>Map</p>
+                </div>
+        </div>
+        <div class="col-xs-6" ng-click="MainC.changeView('news')">
+            
+                <div class="main-icon">
+                    <i class="fa fa-newspaper-o fa-2x" aria-hidden="true"> </i>
+                    <p>News</p>
+                </div>
+           
+        </div>
+    </div>
+
+    <div class="clearfix icon-row">
+        <div class="col-xs-6" ng-click="MainC.changeView('eve')">
+            <a href="#/events">
+                <div class="main-icon">
+                    <i class="fa fa-calendar fa-2x" aria-hidden="true"></i>
+                    <p>Events</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-xs-6">
+            <a href="https://www.facebook.com/pages/Auer-Farm/103011423125686">
+                <div class="main-icon">
+                    <i class="fa fa-facebook-official fa-5x" aria-hidden="true"></i>
+                    <p>Facebook</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="clearfix icon-row">
+        <div class="col-xs-6" ng-click="MainC.changeView('sal')">
+                <div class="main-icon">
+                    <i class="fa fa-shopping-basket fa-5x" aria-hidden="true"></i>
+                    <p>On Sale</p>
+                </div>
+        </div>
+        <div class="col-xs-6" ng-click="MainC.changeView('com')">
+                <div class="main-icon">
+                    <i class="fa fa-comments fa-5x" aria-hidden="true"></i>
+                    <p>Comments</p>
+                </div>
+        </div>
+    </div>
+</div>

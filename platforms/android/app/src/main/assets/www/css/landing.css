@@ -1,0 +1,66 @@
+﻿.main-icon {
+    /*box-shadow: 10px 10px 5px #888888;*/
+    border-radius: 30px;
+    background: #8FD559;
+    margin:10% 2% 10% 5%;
+    height:30vh;
+}
+
+
+a > i {
+    color: white;
+}
+
+.angular-google-map-container { height: 400px; }
+
+.main-icon > i {
+    max-height: 30%;
+    color: black;
+    font-size: 5em;
+    position: relative;
+    top: 20px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    margin-top: 20%;
+}
+
+.main-icon > p {
+    color: black;
+    font-weight: 500;
+    font-size: 170%;
+    text-align: center;
+    height:10%;
+    padding-top:-40%;
+}
+
+.icon-row{
+    min-height:28%;
+    max-height:28%
+}
+
+.center{
+    margin:auto;
+}
+
+.main-menu{
+    overflow:hidden;
+}
+
+.page-change.ng-enter {
+  transition:0.5s linear all;
+  opacity:0;
+}
+
+/* The finishing CSS styles for the enter animation */
+.page-change.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+body {
+    overflow:hidden;
+}
+
+#main-menu{
+    height:100vh;
+}
